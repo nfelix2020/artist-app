@@ -1,0 +1,16 @@
+<h2>Artists</h2>
+<div >
+    <ul class="artists" >
+        <li *ngFor="let art of artists">
+          {{art.fullName}}
+          {{art.albumName}}
+          {{art.recentSongReleased}}
+          <button class="btn" (click)="onSelect(art)" routerLink="/artist/{{art.id}}">View details</button>
+           <!-- <button class="btn" routerLink="/artist/{{art.id}}" >View details</button> -->
+        </li>
+      </ul>
+</div>
+<hr>
+<app-artist-details [chosenArtist]="selectedArtist"></app-artist-details>
+
+
