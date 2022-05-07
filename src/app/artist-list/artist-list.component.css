@@ -1,0 +1,27 @@
+img{
+    width: 150px;
+    height: auto;
+}
+
+.photo-artist{
+    float: left;
+}
+
+.photo-artist img{
+    display: block;
+}
+
+.description-artist{
+    margin-left: 200px;
+}
+
+.card-detail{
+    border: 1px solid lightgray;  
+    width: 600px;
+    min-height:550px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}

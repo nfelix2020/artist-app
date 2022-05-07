@@ -1,7 +1,12 @@
-<div *ngIf="chosenArtist">
-  <ul class="artists" >
-      <li >
+<div *ngIf="chosenArtist" class="details-artist sticky-top">
+  <ul class="artists">
+      <li  >
         {{chosenArtist.details}}
+        {{chosenArtist.albumName}}
+        <!-- {{chosenArtist.songs.title}} -->
+       
       </li>
     </ul>
 </div>
+
+
