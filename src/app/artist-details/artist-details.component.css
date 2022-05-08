@@ -3,3 +3,30 @@
 .artists{
     margin-right: 70px;
 }
+
+.description-song{
+    color: green;
+    font-size: 1.2em;
+}
+
+ul li {
+   list-style-type: circle;
+}
+
+.anneeDeSortie{
+    margin-left: 70px;
+    color: blue;
+    font-weight: 700;
+}
+
+.song-audio-file{
+    margin-top: 20px;
+}
+
+.details-artist{
+    /* overflow-y:scroll;
+    overflow-x:hidden;
+    top: 0;
+    position: sticky;  */
+}
+

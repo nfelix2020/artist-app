@@ -1,11 +1,23 @@
 <div *ngIf="chosenArtist" class="details-artist sticky-top">
-  <ul class="artists">
-      <li  >
-        {{chosenArtist.details}}
-        {{chosenArtist.albumName}}
-        <!-- {{chosenArtist.songs.title}} -->
-       
+<!-- Looping through the nested songs array below -->
+<h3 class="title" >Playlist of {{chosenArtist.fullName}}  </h3>  
+<ul class="artists" *ngFor="let song of chosenArtist.songs">  
+  <h6>Album : {{chosenArtist.albumName}}</h6> 
+      <li >
+        <div class="description-song">
+          <!-- {{chosenArtist.details}} -->
+        {{song.title}}
+       <span class="anneeDeSortie">{{song.anneDeSortie}}</span> 
+        <!-- {{song.albumName}}
+         -->
+        </div>
+        <div class="song-audio-file">
+          <audio controls>
+            <source [src]= "song.audioFileURL"  type="audio/mpeg">
+          </audio>
+        </div>
       </li>
+     
     </ul>
 </div>
 
