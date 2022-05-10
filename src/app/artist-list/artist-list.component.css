@@ -11,6 +11,8 @@
     margin: 20px 0px 20px 0px;
     background: url(https://wallpaperaccess.com/full/1385593.jpg);
     background-size: cover;
+    color: white;
+    font-weight: bold;
     
 }
 img{
@@ -40,9 +42,17 @@ img{
     
 }
 
+.card-body , .description-artist h4 h6 p{
+    color: white;
+    font-weight: 150;
+}
+
+.album{
+    font-style: italic;
+}
 
 a{
-    color: inherit;
+    /* color: inherit; */
     text-decoration: none;
 }
 

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistListComponent,
-    ArtistDetailsComponent
+    ArtistDetailsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
