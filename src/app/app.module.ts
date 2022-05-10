@@ -7,13 +7,15 @@ import { ArtistListComponent } from './artist-list/artist-list.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistListComponent,
     ArtistDetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

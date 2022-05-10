@@ -8,7 +8,7 @@
   <div class="row mt-3 mb-5">
       <div class="row mt-3 mb-5">
           <div class="col-lg-6 col-md-6 col-sm-12 col-card " >
-                <div class="card mt-3  px-2 "  *ngFor="let art of artists" (click)="onSelect(art)" >
+                <div class="card mt-3  px-2 "  *ngFor="let art of artists" >
                  <a routerLink="/artist/{{art.id}}">     
                   <div class="card-body">
                         <div class="photo-artist">
@@ -25,13 +25,10 @@
                             <button class="btn btn-primary" (click)="onSelect(art)" routerLink="/artist/{{art.id}}">Découvrir</button>
                             <button class="btn btn-warning mx-3" routerLink=""><i class="fa fa-edit"></i></button>
                             <button class="btn btn-danger mx-3" routerLink=""><i class="fa fa-trash"></i></button>
-                            
-                        </div>
-                        
+                        </div> 
                       </div>
                     </a>
                 </div> 
-               
           </div>
           <!-- second column -->
           <div class="col-lg-6 col-md-6 col-sm-12 col-card ">
