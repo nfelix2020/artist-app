@@ -22,7 +22,8 @@
                             <!-- <ul>
                               <li > </li>
                             </ul> -->
-                            <button class="btn btn-primary" (click)="onSelect(art)" routerLink="/artist/{{art.id}}">Découvrir</button>
+                            <button class="btn btn-primary" *ngIf="!isShown" (click)="onSelect(art)" (click)="toggleShow()"  routerLink="/artist/{{art.id}}">Ecouter</button>
+                            <button class="btn btn-primary" *ngIf="isShown" (click)="onSelect(art)"  (click)="toggleShow()" routerLink="/artist/{{art.id}}">Biographie</button>
                             <button class="btn btn-warning mx-3" routerLink=""><i class="fa fa-edit"></i></button>
                             <button class="btn btn-danger mx-3" routerLink=""><i class="fa fa-trash"></i></button>
                         </div> 
@@ -34,9 +35,12 @@
           <div class="col-lg-6 col-md-6 col-sm-12 col-card ">
             <div class="card mt-3  px-2 card-detail sticky-top">
                    <div class="card-body "> 
-                  <app-artist-details 
+                  <app-artist-details *ngIf="isShown"
                   [chosenArtist]="selectedArtist">
                   </app-artist-details>
+
+                  <app-artist-biography *ngIf="!isShown"
+                  [chosenArt]="selectedArtist" ></app-artist-biography>
                 </div> 
       </div>
       </div>

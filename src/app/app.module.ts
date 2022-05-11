@@ -8,6 +8,8 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NewArtistComponent } from './new-artist/new-artist.component';
+import { ArtistBiographyComponent } from './artist-biography/artist-biography.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ArtistListComponent,
     ArtistDetailsComponent,
     NavbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NewArtistComponent,
+    ArtistBiographyComponent
   ],
   imports: [
     BrowserModule,

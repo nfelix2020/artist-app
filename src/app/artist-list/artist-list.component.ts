@@ -12,6 +12,9 @@ export class ArtistListComponent implements OnInit {
 artists= ARTISTS
 selectedArtist: Artist
 
+isShown: boolean = false ; // hidden by default
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,4 +23,12 @@ selectedArtist: Artist
   onSelect(artist: Artist){
     this.selectedArtist=artist
   }
+
+  toggleShow() {
+    this.isShown = ! this.isShown;
+    }
+  toggleHide() {
+    this.isShown =  this.isShown;
+    }
+
 }
