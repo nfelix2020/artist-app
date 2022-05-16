@@ -32,7 +32,6 @@ isShown: boolean = false ; // hidden by default
 
   onSelect(artist: Artist ){
     this.selectedArtist=artist
-
   }
 
   toggleShow() {
@@ -43,6 +42,15 @@ isShown: boolean = false ; // hidden by default
     }
 
     showArtists(): void{
-      this.artists= this.artistService.getArtists()
+      // this.artists= this.artistService.getArtists()  //This assignement ocurs SYNCHRONOUSLY, alors que la reponse se fait de façon asynchrone
+      //the server does not return data instantly, so the response is asynchronous
+      //the Observable to emit the array of artists —which could happen now or 
+      //several minutes from now. The subscribe() method passes the emitted array to the callback,
+      // which sets the component's artists property 
+      this.artistService.getArtists().subscribe(data=>{
+        this.artists=data
+
+        
+      })
     }
 }
