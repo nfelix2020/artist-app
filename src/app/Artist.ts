@@ -6,6 +6,6 @@ export class Artist {
     albumName:string;
     recentSongReleased:string;
     image: string;
-    details:string
+    details:string;
     songs: Song[];
 }
