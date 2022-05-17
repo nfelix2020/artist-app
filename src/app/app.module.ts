@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewArtistComponent } from './new-artist/new-artist.component';
 import { ArtistBiographyComponent } from './artist-biography/artist-biography.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ArtistBiographyComponent } from './artist-biography/artist-biography.co
     NavbarComponent,
     PageNotFoundComponent,
     NewArtistComponent,
-    ArtistBiographyComponent
+    ArtistBiographyComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

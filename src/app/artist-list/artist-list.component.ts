@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Artist } from '../Artist';
 import { ArtistService } from '../artist.service';
+import { MessageService } from '../message.service';
 // import { ARTISTS } from '../mock-artists';
 
 @Component({
@@ -23,7 +24,8 @@ isShown: boolean = false ; // hidden by default
 
   constructor(
     private route: ActivatedRoute,
-    private artistService: ArtistService ) { }
+    private artistService: ArtistService,
+    ) { }  
 
   ngOnInit(): void {
     // this.artistId= parseInt(this.route.snapshot.params['id']); 
@@ -49,8 +51,6 @@ isShown: boolean = false ; // hidden by default
       // which sets the component's artists property 
       this.artistService.getArtists().subscribe(data=>{
         this.artists=data
-
-        
       })
     }
 }
