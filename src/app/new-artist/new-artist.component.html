@@ -1,1 +1,63 @@
-<p>new-artist works!</p>
+<div class="container mt-3">
+    <h2 > Add an artist </h2>
+  
+    <form  #f="ngForm" >
+  
+      <div class="form-group">
+        <label for="">First & Last Name</label>
+        <input type="text" id="nom" class="form-control"  name="ownerFullName"    required minlength="4"  >
+      </div>
+  
+      <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)"
+      class="alert">
+        <div *ngIf="name.errors?.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors?.minlength">
+          Name must be at least 4 characters long.
+        </div>
+      </div> -->
+
+  
+      <div class="form-group" >
+        <label for="">Album</label>
+        <input type="text" class="form-control"  name="albumName">
+      </div>
+      <!-- <div *ngIf="ownerEmail.invalid && (ownerEmail.dirty || ownerEmail.touched)"
+      class="alert">
+        <div *ngIf="ownerEmail.errors?.required">
+          Email is required.
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="">Recent Released Song</label>
+        <input type="text" class="form-control"  name="recentSongReleased"  required>
+      </div>
+      
+      <div class="form-group">
+    
+        <img [src]="url" height="150px" width="150px"  alt=""> 
+        <input type="file" class="file-upload"  (change)="onSelect($event)" >
+      </div>
+      
+      <div class="form-group">
+        <label for="">Bank Name</label>
+        <input type="text" class="form-control"  name="bankName"   required >
+      </div>
+      <div class="form-group">
+        <label for="">Country</label>
+        <input type="text" class="form-control"  name="country" bankAccount required >
+      </div>
+      <div class="form-group">
+        <label for="">Zip Code</label>
+        <input type="number" class="form-control"  name="zipCode" required>
+      </div>
+      <div class="form-group">
+        <label for="">Total Amount</label>
+        <input type="number" class="form-control"  name="totalAmount"  required   >
+      </div>
+      <div class="form-group">
+       <button class="btn btn-primary" type="submit">Enregistrer</button>
+      </div>
+    </form>
+  </div>
